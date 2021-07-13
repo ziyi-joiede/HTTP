@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Hello World!</h1>
+	<script type="text/ecmascript">
+		// let xhr = new XMLHttpRequest();
+		// xhr.open('GET', 'http://127.0.0.1:8887');
+		// xhr.send();
+		
+		// 跨域请求->预请求条件
+		// 1. method为 GET，POST，HEAD，
+		// 2. Content-Type：为 text/plain，multipart/form-data,application/x-www-form-urlencoed
+		// 不能同时满足以上两个条件，均会触发预请求
+
+		fetch('http://127.0.0.1:3002', {
+			method: 'put',
+			headers: {
+				'X-Test-Cors': '123'
+			}
+		})
+	</script>
+	<!-- <script src="http://127.0.0.1:8887/"></script> -->
+</body>
+
+</html>
