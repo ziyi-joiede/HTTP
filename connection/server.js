@@ -7,6 +7,7 @@ const server = http.createServer((req, res) => {
 	const img = fs.readFileSync('test.jpg');
 
 	// connetion 每个请求都会用一个 tcp 连接
+	// chrome 浏览器的 network 的 Connetion ID 相同代表同一个 tcp 连接
 	if (req.url === '/') {
 		res.writeHead(200, {
 			'Content-Type': 'text/html',
